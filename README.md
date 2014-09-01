@@ -1,8 +1,13 @@
-README
 
-The readme for totroops.com
+=======
+totroops
+========
 
-Should include setup instructions for the app.
+Care packages for service members!
+
+===
+Development Setup
+===
 
 You'll have to add a file, totroops/local_settings.py
 
