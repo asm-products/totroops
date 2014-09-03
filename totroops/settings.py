@@ -83,8 +83,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
 if os.environ.get('DATABASE_URL') == None:
-    print "here"
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',

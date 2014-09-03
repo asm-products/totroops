@@ -5,6 +5,9 @@ totroops
 
 Care packages for service members!
 
+Full description and breakdown @
+https://assembly.com/totroops
+
 ===
 Development Setup
 ===

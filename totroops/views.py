@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 import datetime
 
 def home(request):
@@ -7,5 +8,5 @@ def home(request):
     return HttpResponse(html)
 
 def beta_signup(request):
-    html = "<html><body>this is the beta email signup.</body></html>"
-    return HttpResponse(html)
+
+    return render(request, 'beta_signup.html')
