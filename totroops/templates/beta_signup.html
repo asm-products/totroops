@@ -3,13 +3,17 @@
 {% block title %}totroops.com{% endblock %}
 
 {% block content %}
-    <h1>beta signup</h1>
-
-    <form role="form">
-        <div class="form-group">
-            <label for="input_email">Email address</label>
-            <input type="email" class="form-control" id="input_email" placeholder="Enter email">
-        </div>
-    </form>
+    <div class="jumbotron">
+        <h1>Sign up for beta!</h1>
+    
+        <form class="form-inline" role="form" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="input_email" class="hidden">Email address</label>
+                <input type="email" class="form-control" id="input_email" name="email" placeholder="Enter email">
+                <button type="button" class="btn btn-success" action="submit">Sign up!</button>
+            </div>
+        </form>
+    </div>
 
 {% endblock %}
