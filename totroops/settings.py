@@ -24,7 +24,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+PREPEND_WWW = False
 
 # Application definition
 
