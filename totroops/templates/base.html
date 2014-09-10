@@ -1,11 +1,13 @@
+{% load analytics %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootswatch.less" rel="stylesheet">
-    <link href="variables.less" rel="stylesheet">
+    <!-- <link href="bootswatch.css" rel="stylesheet">
+    <link href="variables.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-
+ -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <title>{% block title %}totroops.com{% endblock %}</title>
@@ -29,7 +31,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Signup</a></li>
-            <li><a href="/faq">FAQ</a></li>
+            <!-- <li><a href="faq">FAQ</a></li> -->
 
           </ul>
 
@@ -40,6 +42,8 @@
     <div class="col-md-8 col-md-offset-2">
         {% block content %}{% endblock content %}
     </div>
+
+{% analytics "UA-54657402-1" %}
 
 </body>
 </html>

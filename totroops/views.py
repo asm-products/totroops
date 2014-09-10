@@ -4,6 +4,9 @@ from django.shortcuts import render
 import datetime
 
 
+def faq(request):
+    return render(request, 'faq.html')
+
 def home(request):
     now = datetime.datetime.now()
     html = "<html><body>It is now %s.</body></html>" % now
