@@ -21,7 +21,7 @@ GOOGLE_ANALYTICS = 'foo'
 SECRET_KEY = 'development'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
 TEMPLATE_DEBUG = True
 
@@ -75,7 +75,6 @@ ALLOWED_HOSTS = ['*']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 # Static asset configuration
-import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
@@ -100,4 +99,4 @@ if os.environ.get('DATABASE_URL') == None:
     import dj_database_url
     DATABASES['default'] =  dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 
-from local_settings import DATABASES
+from local_settings import DATABASES, DEBUG

@@ -59,6 +59,9 @@
         {% block content %}{% endblock content %}
     </div>
 
+    {% if settings.GOOGLE_ANALYTICS %}
+    settings
+    {% endif %}
 
 </body>
 </html>
