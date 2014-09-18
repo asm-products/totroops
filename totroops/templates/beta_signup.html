@@ -1,19 +1,52 @@
 {% extends 'base.html' %}
 
-{% block title %}totroops.com{% endblock %}
+{% block title %}ToTroops.com - Care packages for service members.{% endblock %}
 
 {% block content %}
-    <div class="jumbotron">
-        <h1>We need your help!</h1>
-        <p>We want to send out a limited set of packages <em>at cost</em> to test our end to end process. We'll be sending out invites soon with more details, but generally we want your feedback on our service. In exchange for an <em>at cost</em> care package, we'll be asking you to complete a few short surveys about your experience. We want ToTroops to be the absolute best possible way to send a care package and your early feedback will allow us to do it.</p>
-        <form class="form-inline" role="form" method="POST">
+  <div class="beta-tron">
+    <div class="col-md-8 col-md-offset-2">
+        <img src="/static/img/logo_white.png" class="img-responsive logo" alt="ToTroops">
+        <h1 class="text-center">ToTroops is a new and hassel-free way to send personalized care packages to troops at home and abroad.</h1>
+        <p class="text-center description">We want ToTroops to be the absolute best possible way to send a care package, so to ensure this we'll be asking you to complete a few short surveys about our service, in exchange for a xx% discount on your first care package. </p>
+    </div>
+  </div>
+  <h4 class="text-centered steps-tab">4 Easy Steps</h4>
+  <div class="steps">
+      <div class="col-md-3">
+        <img src="/static/img/package_white.png" class="img-responsive icons" alt="Pick a Package">
+        <h4 class="text-center">1. Pick a Package</h4>
+        <p class="text-center">We have x different packages to choose from. Find the one that suits your loved ones needs.</p>
+      </div>
+      <div class="col-md-3">
+        <img src="/static/img/postcard_white.png" class="img-responsive icons" alt="Personalize It">
+        <h4 class="text-center">2. Personalize It</h4>
+        <p class="text-center">Make your own postcard by writing a personal note. You can even upload a picture or choose from a number of designs.</p>
+      </div>
+      <div class="col-md-3">
+        <img src="/static/img/stamp_white.png" class="img-responsive icons" alt="Send It">
+        <h4 class="text-center">3. Send It</h4>
+        <p class="text-center">Just enter your details and leave it to us to send off your package.</p>
+      </div>
+      <div class="col-md-3">
+        <img src="/static/img/survey_white.png" class="img-responsive icons" alt="Feedback">
+        <h4 class="text-center">4. Feedback</h4>
+        <p class="text-center">To make sure that we’ve met your expectations, we kindly ask you to complete a few short surveys. </p>
+      </div>
+  </div>
+    <h4 class="text-centered sign-up-tab">Sign Up</h4>
+    <div class="sign-up">
+    <div class="col-md-8 col-md-offset-2">
+    <h4 class="text-center">Let the people you love know that you care by sending them a piece of home.</h4>
+    <p class="text-center">Sign up to recieve an invite to our survey and get xx% off your first package.</p>
+     <form class="form-inline center" role="form" method="POST">
             {% csrf_token %}
-            <div class="form-group">
+            <div class="form-group center">
                 <label for="input_email" class="hidden">Email address</label>
                 <input type="email" class="form-control" id="input_email" name="email" placeholder="Email address">
-                <button type="button" class="btn btn-success" action="submit">Sign up!</button>
+                <button type="button" class="btn btn-green" action="submit">Sign up!</button>
             </div>
         </form>
+        </div>
     </div>
 
 {% endblock %}
