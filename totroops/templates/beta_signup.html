@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}totroops.com{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>We need your help!</h1>
+        <p>We want to send out a limited set of packages <em>at a deep discount</em> to test our end to end process. We'll be sending out invites soon with more details, but generally we want your feedback on our service. In exchange for a <em>deep discount</em> care package, we'll be asking you to complete a few short surveys about your experience. We want ToTroops to be the absolute best possible way to send a care package and your early feedback will allow us to do it.</p>
+        <form class="form-inline" role="form" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="input_email" class="hidden">Email address</label>
+                <input type="email" class="form-control" id="input_email" name="email" placeholder="Email address">
+                <button type="button" class="btn btn-success" action="submit">Sign up!</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
