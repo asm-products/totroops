@@ -1,0 +1,11 @@
+h1,h2,h3,h4,h5,h6,p,blockquote,a{color:white;}
+.beta-tron {background: linear-gradient(rgba(72, 87, 97, 0.75),rgba(72, 87, 97, 0.75)), url('/static/img/beta_bg.jpg'); background-size: cover; min-height: 600px; max-height: 850px; padding: 5% 10% 10%;}
+.logo {margin:0 auto;}
+.center {margin: 0 auto; text-align: center;}
+.description {padding: 20px;}
+.icons {margin: 0 auto;}
+.steps {background: #949e6d; min-height: 450px; max-height: 1700px; padding-top: 60px; padding-bottom: 60px;}
+.steps-tab {background: #949e6d; border-radius: 10px 10px 0px 0px; max-width: 200px; min-height: 90px;margin: -50px auto; text-align: center; padding-top: 15px;}
+.sign-up {background: #3b4c57; min-height: 200px; max-height: 600px; padding-top: 60px; padding-bottom: 60px;}
+.sign-up-tab {background: #3b4c57; border-radius: 10px 10px 0px 0px; max-width: 200px; min-height: 90px; margin: -50px auto; text-align: center; padding-top: 15px;}
+.btn-green {background: #949e6d; color: #fff;}
