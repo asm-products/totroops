@@ -1,9 +1,13 @@
+import datetime
+
 from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.template import RequestContext, loader
-import datetime
 
+import logging
+
+logger = logging.getLogger('testlogger')
 
 def faq(request):
     return render(request, 'faq.html')
@@ -22,6 +26,7 @@ def beta_signup(request):
         context = RequestContext(request, {
                 'user': user,
             })
+        logger.info("%s just signed up!" % email)
         return HttpResponse(template.render(context))
 
     return render(request, 'beta_signup.html')
