@@ -59,7 +59,9 @@ Quit the server with CONTROL-C.
 
 Now we're running our app on the command line!
 
-=== Development Tools ===
+=== 
+Development Tools
+===
 
 There are two main ways to get more info out of Django while running locally.
 
