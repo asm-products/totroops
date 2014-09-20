@@ -60,6 +60,7 @@ Quit the server with CONTROL-C.
 Now we're running our app on the command line!
 
 === Development Tools ===
+
 There are two main ways to get more info out of Django while running locally.
 
 The first is [ipdb](https://pypi.python.org/pypi/ipdb) which is an extension of Python Debugger, aka pdb. This is already part of the requirements.txt file, so once you're setup, you should have access to it. The quick way to use it is place "import ipdb; ipdb.set_trace()" somewhere in your python code. Once the server tries to execute that line it will drop you into a console shell where you can inspect variables, manipulate the stack, look around, etc.
