@@ -32,6 +32,7 @@ PREPEND_WWW = False
 # Application definition
 
 INSTALLED_APPS = (
+    'analytical',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
