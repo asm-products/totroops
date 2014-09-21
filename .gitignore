@@ -1,6 +1,5 @@
 venv
 staticfiles
-local_settings.py
 
 # Compiled source #
 ###################

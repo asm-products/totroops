@@ -141,5 +141,7 @@ LOGGING = {
     }
 }
 
-
-from local_settings import DATABASES, DEBUG
+try:
+    from local_settings import DATABASES, DEBUG
+except:
+    pass
