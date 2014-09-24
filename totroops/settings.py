@@ -21,7 +21,7 @@ GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-54657402-1'
 SECRET_KEY = 'development'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', False)
+DEBUG = os.environ.get('DEBUG', True)
 
 TEMPLATE_DEBUG = True
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Other apps.
     'analytical',
+    'polls',
     'post_office',
 )
 
