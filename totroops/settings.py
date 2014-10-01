@@ -106,8 +106,9 @@ if os.environ.get('DATABASE_URL') == None:
             'PORT': '5432',
         }
     }
-    import dj_database_url
-    DATABASES['default'] =  dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 
 LOGGING = {
     'version': 1,
