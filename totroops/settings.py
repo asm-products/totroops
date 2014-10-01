@@ -95,6 +95,9 @@ STATICFILES_DIRS = (
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+
 if os.environ.get('DATABASE_URL') == None:
     DATABASES = {
         'default': {
@@ -106,9 +109,6 @@ if os.environ.get('DATABASE_URL') == None:
             'PORT': '5432',
         }
     }
-
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 
 LOGGING = {
     'version': 1,
