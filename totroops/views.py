@@ -7,6 +7,7 @@ from django.template import RequestContext, loader
 
 import logging
 
+
 logger = logging.getLogger('testlogger')
 
 def faq(request):
