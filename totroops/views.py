@@ -1,7 +1,7 @@
 import datetime
 
 from django.contrib.auth.models import User
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import RequestContext, loader
 
@@ -23,7 +23,7 @@ def beta_signup(request):
         # Add an entry to the auth_user table with this email address.
         email = request.POST['email']
         user = User.objects.get_or_create(username=email, email=email)
-        template = loader.get_template('thanks.html')
+        template = loader.get_template('poll.html')
         context = RequestContext(request, {
                 'user': user,
             })

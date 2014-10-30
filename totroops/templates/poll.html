@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}totroops.com{% endblock %}
+
+{% block content %}
+<div class="thankstron">
+  <div class="col-md-8 col-md-offset-2 shout-out">
+        <img src="/static/img/logo_white.png" class="img-responsive logo" alt="ToTroops">
+        <h1>Thanks!</h1>
+        <p class="text-center description">As a veteran, I know how meaningful it is to receive a care package during deployment. We're building ToTroops to offer you a fast, affordable, and hassle-free way to send love abroad. We want ToTroops to be the absolute best possible way to send a care package, so to ensure this please complete this short survey about our service, in exchange for a 25% discount on your first care package.</p>
+        <form class="form-inline center" role="form" method="POST">
+          {% csrf_token %}
+          <div class="form-group center">
+            <label for="input_email" class="hidden">Email address</label>
+            <input type="email" class="form-control" id="input_email" name="email" placeholder="Email address">
+            <button type="submit" class="btn btn-green" action="submit">Sign up!</button>
+          </div>
+        </form>
+ 
+  </div>
+</div>
+
+{% endblock %}
