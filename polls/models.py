@@ -15,5 +15,5 @@ class Choice(models.Model):
     question = models.ForeignKey(Question)
     choice_text = models.CharField(max_length=200)
     choice_multiple = models.CharField(max_length=200)
-    choice_boolean = models.Boolean()
+    choice_boolean = models.BooleanField()
 
