@@ -28,7 +28,7 @@ class Package(models.Model):
 
 class Order(models.Model):
     customer = models.ForeignKey(User, blank=False, null=False)
-    destination = models.TextField()
+    recipient= models.ForeignKey(Recipient, blank=False, null=False)
     packages = models.ManyToManyField('Package')
 
     @property
@@ -43,3 +43,8 @@ class Order(models.Model):
             total += package.price
         print type(total)
         return total
+
+
+class Recipient(models.Model):
+    name = models.TextField()
+    address = models.TextField()
