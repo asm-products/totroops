@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime, date
 
 from django.contrib.auth.models import User
 from django.http import HttpResponse
@@ -14,7 +14,7 @@ def faq(request):
     return render(request, 'faq.html')
 
 def home(request):
-    now = datetime.datetime.now()
+    now = datetime.now()
     html = "<html><body>It is now %s.</body></html>" % now
     return HttpResponse(html)
 
@@ -30,7 +30,9 @@ def beta_signup(request):
         logger.info("%s just signed up!" % email)
         return HttpResponse(template.render(context))
 
-    return render(request, 'beta_signup.html')
+    data = { 'current_year': date.today().year }
+
+    return render(request, 'beta_signup.html', data)
 
 def thanks(request):
     return render(request, 'thanks.html')

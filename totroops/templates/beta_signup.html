@@ -4,56 +4,114 @@
 
 {% block content %}
   <div class="beta-tron">
-    <div class="col-md-8 col-md-offset-2">
-        <img src="/static/img/logo_white.png" class="img-responsive logo" alt="ToTroops">
-        <h1 class="text-center">ToTroops is a new and hassel-free way to send personalized care packages to troops at home and abroad.</h1>
-        <h4 class="text-center">Sign up and receive a 25% off your first package!</h4>
-          <form class="form-inline center" role="form" method="POST">
-            {% csrf_token %}
-            <div class="form-group center">
-              <label for="input_email" class="hidden">Email address</label>
-              <input type="email" class="form-control" id="input_email" name="email" placeholder="Email address">
-              <button type="submit" class="btn btn-green" action="submit">Sign up!</button>
-            </div>
-          </form>
-    </div>
+    <img src="{{STATIC_URL}}img/logo_white.png" class="img-responsive logo" alt="ToTroops">
+    <h3 class="text-center beta-tron-text">Personalized care packages for troops at home and abroad</h3>
   </div>
-  <h4 class="text-centered steps-tab">4 Easy Steps</h4>
-  <div class="steps">
-      <div class="col-md-3">
-        <img src="/static/img/package_white.png" class="img-responsive icons" alt="Pick a Package">
-        <h4 class="text-center">1. Pick a Package</h4>
-        <p class="text-center">We have 3 different packages to choose from. Find one that means the most to your loved one.</p>
-      </div>
-      <div class="col-md-3">
-        <img src="/static/img/postcard_white.png" class="img-responsive icons" alt="Personalize It">
-        <h4 class="text-center">2. Personalize It</h4>
-        <p class="text-center">Make your own postcard by writing a personal note. You can even upload a picture or choose from a number of designs.</p>
-      </div>
-      <div class="col-md-3">
-        <img src="/static/img/stamp_white.png" class="img-responsive icons" alt="Send It">
-        <h4 class="text-center">3. Send It</h4>
-        <p class="text-center">Just enter your details and leave it to us to send off your package.</p>
-      </div>
-      <div class="col-md-3">
-        <img src="/static/img/survey_white.png" class="img-responsive icons" alt="Feedback">
-        <h4 class="text-center">4. Feedback</h4>
-        <p class="text-center">To make sure that we’ve met your expectations, we kindly ask you to complete a short survey.</p>
-      </div>
-  </div>
-    <h4 class="text-centered sign-up-tab">Sign Up</h4>
-    <div class="sign-up">
-    <div class="col-md-8 col-md-offset-2">
-    <h4 class="text-center">Sign up and recieve a 25% off your first package!</h4>
-      <form class="form-inline center" role="form" method="POST">
-        {% csrf_token %}
-        <div class="form-group center">
-          <label for="input_email" class="hidden">Email address</label>
-          <input type="email" class="form-control" id="input_email" name="email" placeholder="Email address">
-          <button type="submit" class="btn btn-green" action="submit">Sign up!</button>
-        </div>
-      </form>
-        </div>
-    </div>
+  <div class="row">
 
+    <div class="col-md-6 col-md-height blue-bg-light">
+
+      <div class="how-it-works">
+        <h2 class="how-it-works-label text-center">
+          <span class="label">How It Works</span>
+        </h2>
+        <div class="row">
+          <div class="col-xs-8 col-xs-offset-2">
+            <div class="row">
+              <div class="col-xs-6 step">
+                <div class="step-icon">
+                  <img src="{{STATIC_URL}}img/package_white.png" class="img-responsive center-block" alt="Select a package">
+                  <i class="circle-number">1</i>
+                </div>
+                <h4 class="step-label">Select a package</h4>
+              </div>
+              <div class="col-xs-6 step">
+                <div class="step-icon">
+                  <img src="{{STATIC_URL}}img/postcard_white.png" class="img-responsive" alt="Personalize it">
+                  <i class="circle-number">2</i>
+                </div>
+                <h4>Personalize it</h4>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-xs-6 step">
+                <div class="step-icon">
+                  <img src="{{STATIC_URL}}img/stamp_white.png" class="img-responsive" alt="We send it">
+                  <i class="circle-number">3</i>
+                </div>
+                <h4>We send it</h4>
+              </div>
+              <div class="col-xs-6 step">
+                <div class="step-icon">
+                  <img src="{{STATIC_URL}}img/survey_white.png" class="img-responsive" alt="Feedback">
+                  <i class="circle-number">4</i>
+                </div>
+                <h4>Feedback</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- / div.how-it-works -->
+
+    </div> <!-- / div.col-md-height -->
+
+    <div class="col-md-6 col-md-height blue-bg-md col-top">
+
+      <div class="product-description">
+        <div class="ribbon">
+          <div class="bk l">
+            <div class="arrow top"></div>
+            <div class="arrow bottom"></div>
+          </div>
+          <div class="ribbon-skew l"></div>
+          <div class="ribbon-text">
+            <div>Send a little piece of home in time for the holidays!</div>
+          </div>
+          <div class="ribbon-skew r"></div>
+          <div class="bk r">
+            <div class="arrow top"></div>
+            <div class="arrow bottom"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-5 text-right">
+            <img class="img-responsive img-circle center-block" src="http://placehold.it/185x185/FFFFFF/BEBEC5&text=Product+Image">
+          </div>
+          <div class="col-xs-7">
+            <h3>ToTroops Holiday Package</h3>
+            <p>Description of package goes here, lorem ipsum dolor sit amet consectetur, package includes this product, that product, this product, and that product.</p>
+            <br>
+            <a href="#" class="btn btn-green btn-lg">Purchase</a>
+          </div>
+        </div>
+      </div><!-- / div.product-description -->
+
+      <div class="sign-up blue-bg-dark">
+        <div class="row">
+          <div class="col-xs-8 col-xs-offset-2">
+            <div class="text-center">
+              <h4>We're just getting started! Sign up to stay up-to-date and recieve 25% off your first package:</h4>
+            </div>
+            <form class="form-inline center" role="form" method="POST">
+              {% csrf_token %}
+              <div class="form-group center">
+                <label class="sr-only" for="input_email">Email address</label>
+                <div class="input-group input-group-lg">
+                  <input type="email" class="form-control" id="input_email" name="email" placeholder="Email address" required>
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-green" action="submit">Sign up!</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> <!-- / div.sign-up -->
+
+    </div> <!-- / div.col-md-height -->
+
+  </div> <!-- / div.row -->
+
+  <footer>
+    <span class="copyright">Made by ToTroops &#169; {{ current_year }}</span>
+  </footer>
 {% endblock %}
