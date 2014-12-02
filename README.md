@@ -33,6 +33,8 @@ This will point your local install at your local postgres database.
         'default': dj_database_url.config(default='postgres://<user>:<password>@localhost/<database>')
     }
 
+    DEBUG = True
+
 Replace <user> <password> and <database> variables with credentials for your local database.
 
 Python comes preinstalled on Macs these days. From the command line you can type "python" to open a shell and verify what version you are running. ToTroops is built on 2.7.5.
