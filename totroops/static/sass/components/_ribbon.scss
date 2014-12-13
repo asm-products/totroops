@@ -1,0 +1,184 @@
+/* Ribbon */
+/* http://www.bypeople.com/responsive-css-ribbon-codepen/ */
+
+.ribbon {
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+
+  > div {
+    height: 50px;
+
+    @media (max-width: 767px) {
+      height: 30px;
+    }
+  }
+
+  .bk {
+    background: $accent-color-dark;
+    position: absolute;
+    width: 15%;
+    top: 24px;
+
+    @media (max-width: 767px) {
+      top: 17px;
+    }
+
+    &.l {
+      left: 0;
+
+      > div {
+        left: -30px;
+
+        @media (max-width: 767px) {
+          left: -20px;
+        }
+      }
+    }
+
+    &.r {
+      right: 0;
+
+      > div {
+        right: -30px;
+
+        @media (max-width: 767px) {
+          right: -20px;
+        }
+      }
+    }
+  }
+
+  .arrow {
+    height: 25px !important;
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+
+    &.top {
+      top: 0px;
+      border-top: 0px solid transparent;
+      border-bottom: 25px solid transparent;
+      border-right: 30px solid $accent-color-dark;
+    }
+
+    &.bottom {
+      top: 25px;
+      border-top: 25px solid transparent;
+      border-bottom:0px solid transparent;
+      border-right: 30px solid $accent-color-dark;
+
+      @media (max-width: 767px) {
+        top: 5px;
+      }
+    }
+  }
+
+  .r {
+    .bottom {
+      border-left: 30px solid $accent-color-dark;
+      border-right: none;
+    }
+
+    .top {
+      border-left: 30px solid $accent-color-dark;
+      border-right: none;
+    }
+
+    .arrow {
+      @media (max-width: 767px) {
+        right: -14px;
+      }
+    }
+
+  }
+
+  .l {
+    .arrow {
+      @media (max-width: 767px) {
+        left: -14px;
+      }
+    }
+  }
+}
+
+.ribbon-text {
+  background: $accent-color;
+  position: relative;
+  display: block;
+  width: 90%;
+  left: 50%;
+  top: 0;
+  padding: 5px;
+  margin-left: -45%;
+  z-index: 10;
+
+  > div {
+    height: 40px;
+    line-height: 2em;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      height: 20px;
+    }
+  }
+}
+
+.ribbon-skew {
+  position: absolute;
+  background: $accent-color-darker;
+  width: 10%;
+  top: 12px;
+  z-index: 5;
+
+  @media (max-width: 767px) {
+    top: 9px;
+  }
+
+  &.l {
+    left: 5%;
+    transform: skew(00deg,28deg);
+
+    @media (min-width: 1475px) {
+      transform: skew(00deg, 20deg);
+    }
+
+    @media (max-width: 1199px) {
+      transform: skew(00deg, 15deg);
+    }
+
+    @media (max-width: 991px) {
+      transform: skew(00deg,16deg);
+    }
+
+    @media (max-width: 767px) {
+      transform: skew(00deg,18deg);
+    }
+
+  }
+
+  &.r {
+    right: 5%;
+    transform: skew(00deg,-28deg);
+
+    @media (min-width: 1475px) {
+      transform: skew(00deg,-20deg);
+    }
+
+    @media (max-width: 1199px) {
+      transform: skew(00deg, -15deg);
+    }
+
+    @media (max-width: 991px) {
+      transform: skew(00deg,-16deg);
+    }
+
+    @media (max-width: 767px) {
+      transform: skew(00deg,-18deg);
+    }
+  }
+}

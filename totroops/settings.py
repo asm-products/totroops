@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'analytical',
     'polls',
     'post_office',
+    'compressor'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,7 +94,21 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
+
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
+# Django Compressor
+# http://django-compressor.readthedocs.org/en/latest/
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'sass --scss {infile} {outfile}'),
+)
 
 import dj_database_url
 DATABASES = {}
