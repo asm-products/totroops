@@ -2,6 +2,7 @@ Django==1.7.1
 dj-database-url==0.3.0
 dj-static==0.0.6
 django-analytical==0.19.0
+django-compressor==1.4
 django-post-office==1.0.0
 django-toolbelt==0.0.1
 gnureadline==6.3.3
