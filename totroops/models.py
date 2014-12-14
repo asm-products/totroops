@@ -30,7 +30,7 @@ class Order(models.Model):
     customer = models.ForeignKey(User, blank=False, null=False)
     recipient= models.ForeignKey(Recipient, blank=False, null=False)
     packages = models.ManyToManyField('Package')
-    coupon_code = models.CharField(max_length=128)
+    coupon_code = models.CharField(max_length=50)
 
     @property
     def total_price(self):
