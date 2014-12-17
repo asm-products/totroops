@@ -39,11 +39,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.formtools',
     # Other apps.
     'analytical',
     'polls',
     'post_office',
-    'compressor'
+    'compressor',
+    'order'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -87,6 +89,7 @@ ADMINS = (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 # Static asset configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MEDIA_ROOT = 'media';
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
@@ -106,9 +109,13 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 # Django Compressor
 # http://django-compressor.readthedocs.org/en/latest/
 
+COMPRESS_ENABLED = True
+
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'sass --scss {infile} {outfile}'),
 )
+
+COMPRESS_OFFLINE = True
 
 import dj_database_url
 DATABASES = {}

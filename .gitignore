@@ -2,6 +2,7 @@ venv
 staticfiles
 local_settings.py
 .sass-cache
+media
 
 # Compiled source #
 ###################
