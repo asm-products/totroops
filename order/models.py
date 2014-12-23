@@ -10,7 +10,7 @@ class Item(models.Model):
     height = models.FloatField()
     length = models.FloatField()
     width = models.FloatField()
-    food = models.BooleanField()
+    food = models.BooleanField(default=False)
 
 
 class Package(models.Model):
@@ -26,10 +26,16 @@ class Package(models.Model):
     tax = models.FloatField()
 
 
+class Recipient(models.Model):
+    name = models.TextField()
+    address = models.TextField()
+
+
 class Order(models.Model):
-    customer = models.ForeignKey(User, blank=False, null=False)
+    customer = models.ForeignKey(User, blank=True, null=True)
     recipient= models.ForeignKey(Recipient, blank=False, null=False)
     packages = models.ManyToManyField('Package')
+    message = models.TextField(max_length=500, blank=True)
 
     @property
     def total_price(self):
@@ -45,6 +51,3 @@ class Order(models.Model):
         return total
 
 
-class Recipient(models.Model):
-    name = models.TextField()
-    address = models.TextField()
