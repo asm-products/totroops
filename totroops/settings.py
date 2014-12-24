@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Other apps.
     'analytical',
-    'polls',
+    'order',
     'post_office',
     'compressor'
 )
@@ -80,7 +80,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 ADMINS = (
-    ('Phil', 'philiplicarter@gmail.com'),
+    ('Phil', 'phil@totroops.com'),
 )
 
 # Static files (CSS, JavaScript, Images)
