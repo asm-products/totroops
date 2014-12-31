@@ -41,9 +41,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Other apps.
     'analytical',
-    'order',
     'post_office',
-    'compressor'
+    'compressor',
+    'totroops',
 )
 
 MIDDLEWARE_CLASSES = (
