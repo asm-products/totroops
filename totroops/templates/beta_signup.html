@@ -5,7 +5,7 @@
 {% block content %}
   <div class="beta-tron">
     <img src="{{STATIC_URL}}img/logo_white.png" class="img-responsive logo" id="beta_logo" alt="ToTroops">
-    <h3 class="text-center beta-tron-text">Personalized care packages for troops at home and abroad</h3>
+    <h3 class="text-center beta-tron-text">Hand selected care packages for troops at home and abroad!</h3>
   </div>
   <div class="row">
 
@@ -64,7 +64,7 @@
           </div>
           <div class="ribbon-skew l"></div>
           <div class="ribbon-text">
-            <div>Send a little piece of home in time for the holidays!</div>
+            <div>Send a little piece of home to someone you love!</div>
           </div>
           <div class="ribbon-skew r"></div>
           <div class="bk r">
@@ -74,13 +74,13 @@
         </div>
         <div class="row">
           <div class="col-xs-5 text-right">
-            <img class="img-responsive img-circle center-block" src="http://placehold.it/185x185/FFFFFF/BEBEC5&text=Product+Image">
+            <img class="img-responsive img-circle center-block" src="{{STATIC_URL}}img/totroops_first_package.jpg">
           </div>
           <div class="col-xs-7">
-            <h3>ToTroops Holiday Package</h3>
-            <p>Description of package goes here, lorem ipsum dolor sit amet consectetur, package includes this product, that product, this product, and that product.</p>
+            <h3>ToTroops Care Package</h3>
+            <p>Send some love with this basic care package! For only $29 your loved one will get a DVD, Bicycle brand playing cards, a moleskin notebook, 4x AA batteries, two camping carabiners, an LED flashlight, a Bic lighter, and some Pilot G2 pens!</p>
             <br>
-            <a href="#" class="btn btn-green btn-lg">Purchase</a>
+            <a href="#" class="btn btn-green btn-lg">Send it!</a>
           </div>
         </div>
       </div><!-- / div.product-description -->
@@ -89,7 +89,7 @@
         <div class="row">
           <div class="col-xs-8 col-xs-offset-2">
             <div class="text-center">
-              <h4>We're just getting started! Sign up to stay up-to-date and recieve 25% off your first package:</h4>
+              <h4>We're just getting started! Sign up to stay up-to-date and recieve 25% off your first package!</h4>
             </div>
             <form class="form-inline center" role="form" method="POST">
               {% csrf_token %}
