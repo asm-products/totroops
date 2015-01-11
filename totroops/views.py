@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import RequestContext, loader
 
+from totroops.models import Recipent
+
 import logging
 
 
@@ -20,14 +22,20 @@ def home(request):
 
 def beta_signup(request):
     if request.method == "POST":
-        # Add an entry to the auth_user table with this email address.
-        email = request.POST['email']
-        user = User.objects.get_or_create(username=email, email=email)
+        # Add an entry to the Recipent model with this info.
+
+        name = request.POST['name']
+        address = request.POST['address']
+
+        recipent = Recipent.get_or_create(name=name, address=address)
+
+        # import ipdb; ipdb.set_trace()
+        logger.info("%s, %s - submitted." % (name, address))
+
         template = loader.get_template('poll.html')
         context = RequestContext(request, {
-                'user': user,
+                'recipent': recipent
             })
-        logger.info("%s just signed up!" % email)
         return HttpResponse(template.render(context))
 
     data = { 'current_year': date.today().year }

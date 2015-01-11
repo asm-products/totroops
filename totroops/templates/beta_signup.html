@@ -85,6 +85,9 @@
           <!-- Modal -->
           <div class="modal fade" id="packageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
+
+              <form role="form" method="POST">
+                {% csrf_token %}
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -93,24 +96,26 @@
                 <div class="modal-body">
                   <p>We're just getting started, so for now we only offer one package. This let's us focus on the best possible service. For only $29 your loved one will get a DVD, Bicycle brand playing cards, a notebook, 4x AA batteries, two camping carabiners, an LED flashlight, a Bic lighter, and some Pilot G2 pens!</p>
                   <img src="{{STATIC_URL}}img/basic_package_grass.jpg" id="basicPackageImg">
-                  <form>
                     <div class="form-group">
                       <label for="inputName" class="visuallyhidden">Sercive member's name</label>
-                      <input type="text" class="form-control" id="inputName" placeholder="Service member's name">
+                      <input type="text" class="form-control" id="inputName" name="name" placeholder="Service member's name">
                       <label for="inputAddress" class="visuallyhidden">Service member's address</label>
-                      <textarea class="form-control" rows="3" placeholder="Service member's address"></textarea>
-                  </form>
+                      <textarea class="form-control" rows="3" name="address" placeholder="Service member's address"></textarea>
+                  
+
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Send some love!</button>
+                  <button type="submit" action="submit" class="btn btn-primary">Send some love!</button>
                 </div>
               </div>
+              </form>
+
             </div>
           </div>
         </div>
       </div><!-- / div.product-description -->
-
+<!-- 
       <div class="sign-up blue-bg-dark">
         <div class="row">
           <div class="col-xs-8 col-xs-offset-2">
@@ -131,7 +136,7 @@
             </form>
           </div>
         </div>
-      </div> <!-- / div.sign-up -->
+      </div> <!-- / div.sign-up --> -->
 
     </div> <!-- / div.col-md-height -->
 
@@ -139,5 +144,17 @@
 
   <footer>
     <span class="copyright">Made by ToTroops &#169; {{ current_year }}</span>
+    <form action="" method="">
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_l7uur4tglVrl6kRTIn8EAvGs"
+        data-amount="2900"
+        data-name="ToTroops Package"
+        data-description="1 Basic package ($29)"
+        data-image="/128x128.png">
+      </script>
+    </form>
   </footer>
+
+
 {% endblock %}
