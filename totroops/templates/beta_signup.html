@@ -80,7 +80,33 @@
             <h3>ToTroops Care Package</h3>
             <p>Send some love with this basic care package! For only $29 your loved one will get a DVD, Bicycle brand playing cards, a moleskin notebook, 4x AA batteries, two camping carabiners, an LED flashlight, a Bic lighter, and some Pilot G2 pens!</p>
             <br>
-            <a href="#" class="btn btn-green btn-lg">Send it!</a>
+            <a href="#" class="btn btn-green btn-lg"  data-toggle="modal" data-target="#packageModal">Send it!</a>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="packageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="packageModalLabel">Send the basic package!</h4>
+                </div>
+                <div class="modal-body">
+                  <p>We're just getting started, so for now we only offer one package. This let's us focus on the best possible service. For only $29 your loved one will get a DVD, Bicycle brand playing cards, a notebook, 4x AA batteries, two camping carabiners, an LED flashlight, a Bic lighter, and some Pilot G2 pens!</p>
+                  <img src="{{STATIC_URL}}img/basic_package_grass.jpg" id="basicPackageImg">
+                  <form>
+                    <div class="form-group">
+                      <label for="inputName" class="visuallyhidden">Sercive member's name</label>
+                      <input type="text" class="form-control" id="inputName" placeholder="Service member's name">
+                      <label for="inputAddress" class="visuallyhidden">Service member's address</label>
+                      <textarea class="form-control" rows="3" placeholder="Service member's address"></textarea>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Send some love!</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div><!-- / div.product-description -->

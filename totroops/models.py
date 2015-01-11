@@ -53,6 +53,7 @@ class Recipient(models.Model):
 
 class Order(models.Model):
     customer = models.ForeignKey(User, blank=True, null=True)
+    # TODO add stripe coustomer id here?
     recipient= models.ForeignKey(Recipient, blank=False, null=False)
     packages = models.ManyToManyField('Package')
     coupon = models.ForeignKey(Coupon, blank=True, null=True)

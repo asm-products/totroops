@@ -23,6 +23,18 @@ h1, h2, h3, h4, h5, h6, p, blockquote, a {
   background-color: #36383A;
 }
 
+/* line 21, ../sass/base/_base.scss */
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 /* columns of same height styles */
 /* Reference http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height */
 /* line 3, ../sass/layout/_grid.scss */
@@ -363,6 +375,19 @@ footer {
 /* line 22, ../sass/components/_thankstron.scss */
 .thankstron .description {
   padding: 20px 20px 40px;
+}
+
+/* line 1, ../sass/components/_modals.scss */
+#packageModal p, #packageModal h4 {
+  color: #000;
+}
+
+/* line 5, ../sass/components/_modals.scss */
+#basicPackageImg {
+  height: 350px;
+  width: 500px;
+  margin-left: 20px;
+  margin-bottom: 15px;
 }
 
 /* line 1, ../sass/pages/_beta.scss */
