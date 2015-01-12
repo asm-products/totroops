@@ -18,35 +18,34 @@
         <div class="row">
           <div class="col-xs-8 col-xs-offset-2">
             <div class="row">
-              <div class="col-xs-6 step">
+              <div class="col-xs-4 step">
                 <div class="step-icon">
                   <img src="{{STATIC_URL}}img/package_white.png" class="img-responsive center-block" alt="Select a package">
                   <i class="circle-number">1</i>
                 </div>
                 <h4 class="step-label">Select a package</h4>
               </div>
-              <div class="col-xs-6 step">
+              <div class="col-xs-4 step">
                 <div class="step-icon">
                   <img src="{{STATIC_URL}}img/postcard_white.png" class="img-responsive" alt="Personalize it">
                   <i class="circle-number">2</i>
                 </div>
                 <h4>Personalize it</h4>
               </div>
-              <div class="clearfix"></div>
-              <div class="col-xs-6 step">
+              <div class="col-xs-4 step">
                 <div class="step-icon">
                   <img src="{{STATIC_URL}}img/stamp_white.png" class="img-responsive" alt="We send it">
                   <i class="circle-number">3</i>
                 </div>
                 <h4>We send it</h4>
               </div>
-              <div class="col-xs-6 step">
+<!--               <div class="col-xs-6 step">
                 <div class="step-icon">
                   <img src="{{STATIC_URL}}img/survey_white.png" class="img-responsive" alt="Feedback">
                   <i class="circle-number">4</i>
                 </div>
                 <h4>Feedback</h4>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -80,7 +79,7 @@
             <h3>ToTroops Care Package</h3>
             <p>Send some love with this basic care package! For only $29 your loved one will get a DVD, Bicycle brand playing cards, a moleskin notebook, 4x AA batteries, two camping carabiners, an LED flashlight, a Bic lighter, and some Pilot G2 pens!</p>
             <br>
-            <a href="#" class="btn btn-green btn-lg"  data-toggle="modal" data-target="#packageModal">Send it!</a>
+            <a href="#" class="btn btn-green btn-lg"  data-toggle="modal" data-target="#packageModal">Tell me more!</a>
           </div>
           <!-- Modal -->
           <div class="modal fade" id="packageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -94,9 +93,10 @@
                   <h4 class="modal-title" id="packageModalLabel">Send the basic package!</h4>
                 </div>
                 <div class="modal-body">
-                  <p>We're just getting started, so for now we only offer one package. This let's us focus on the best possible service. For only $29 your loved one will get a DVD, Bicycle brand playing cards, a notebook, 4x AA batteries, two camping carabiners, an LED flashlight, a Bic lighter, and some Pilot G2 pens!</p>
+                  <p>We're just getting started, so for now we only offer one package. This let's us focus on the best possible service. For only $29 your loved one will get a DVD, Bicycle brand playing cards, a notebook, 4x AA batteries, two camping carabiners, an LED flashlight, a Bic lighter, some Pilot G2 pens!</p>
+                  <p>Additonally, we'll offer the option to upload and image and type a message. We'll print this out in a postcard format so that your loved one can get a personalized message from you. We hope this will cheer them up a bit, as it's always nice to hear from home.</p>
                   <img src="{{STATIC_URL}}img/basic_package_grass.jpg" id="basicPackageImg">
-                    <div class="form-group">
+<!--                     <div class="form-group">
                       <label for="inputName" class="visuallyhidden">Sercive member's name</label>
                       <input type="text" class="form-control" id="inputName" name="name" placeholder="Service member's name">
                       <label for="inputAddress" class="visuallyhidden">Service member's address</label>
@@ -104,10 +104,10 @@
                   
 
                 </div>
-                <div class="modal-footer">
+ -->                <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="submit" action="submit" class="btn btn-primary">Send some love!</button>
-                </div>
+<!--                   <button type="submit" action="submit" class="btn btn-primary">Send some love!</button>
+ -->                </div>
               </div>
               </form>
 
@@ -144,7 +144,7 @@
 
   <footer>
     <span class="copyright">Made by ToTroops &#169; {{ current_year }}</span>
-    <form action="" method="">
+<!--     <form action="" method="">
       <script
         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="pk_test_l7uur4tglVrl6kRTIn8EAvGs"
@@ -154,7 +154,7 @@
         data-image="/128x128.png">
       </script>
     </form>
-  </footer>
+ -->  </footer>
 
 
 {% endblock %}
