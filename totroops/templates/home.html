@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block title %}ToTroops.com - Care packages for service members.{% endblock %}
+
+{% block content %}
+  <div class="beta-tron">
+    <img src="{{STATIC_URL}}img/logo_white.png" class="img-responsive logo" id="beta_logo" alt="ToTroops">
+    <h3 class="text-center beta-tron-text">Hand selected care packages for troops at home and abroad!</h3>
+  </div>
+  <div class="row">
+
+    <div class="col-md-6 col-md-height blue-bg-light">
+
+      <div class="how-it-works">
+        <h2 class="how-it-works-label text-center">
+          <span class="label">How It Works</span>
+        </h2>
+        <div class="row">
+          <div class="col-xs-8 col-xs-offset-2">
+            <div class="row">
+              <div class="col-xs-4 step">
+                <div class="step-icon">
+                  <img src="{{STATIC_URL}}img/package_white.png" class="img-responsive center-block" alt="Select a package">
+                  <i class="circle-number">1</i>
+                </div>
+                <h4 class="step-label">Select a package</h4>
+              </div>
+              <div class="col-xs-4 step">
+                <div class="step-icon">
+                  <img src="{{STATIC_URL}}img/postcard_white.png" class="img-responsive" alt="Personalize it">
+                  <i class="circle-number">2</i>
+                </div>
+                <h4>Personalize it</h4>
+              </div>
+              <div class="col-xs-4 step">
+                <div class="step-icon">
+                  <img src="{{STATIC_URL}}img/stamp_white.png" class="img-responsive" alt="We send it">
+                  <i class="circle-number">3</i>
+                </div>
+                <h4>We send it</h4>
+              </div>
+<!--               <div class="col-xs-6 step">
+                <div class="step-icon">
+                  <img src="{{STATIC_URL}}img/survey_white.png" class="img-responsive" alt="Feedback">
+                  <i class="circle-number">4</i>
+                </div>
+                <h4>Feedback</h4>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div> <!-- / div.how-it-works -->
+
+    </div> <!-- / div.col-md-height -->
+
+    <div class="col-md-6 col-md-height blue-bg-md col-top">
+
+      <div class="product-description">
+        <div class="ribbon">
+          <div class="bk l">
+            <div class="arrow top"></div>
+            <div class="arrow bottom"></div>
+          </div>
+          <div class="ribbon-skew l"></div>
+          <div class="ribbon-text">
+            <div>Send a little piece of home to someone you love!</div>
+          </div>
+          <div class="ribbon-skew r"></div>
+          <div class="bk r">
+            <div class="arrow top"></div>
+            <div class="arrow bottom"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-5 text-right">
+            <img class="img-responsive img-circle center-block" src="{{STATIC_URL}}img/totroops_first_package.jpg">
+          </div>
+          <div class="col-xs-7">
+            <h3>ToTroops Care Package</h3>
+            <p>Send some love with this basic care package! For only $29 your loved one will get a DVD, Bicycle brand playing cards, a moleskin notebook, 4x AA batteries, two camping carabiners, an LED flashlight, a Bic lighter, and some Pilot G2 pens!</p>
+            <br>
+            <a href="#" class="btn btn-green btn-lg"  data-toggle="modal" data-target="#packageModal">Tell me more!</a>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="packageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+
+              <form role="form" method="POST">
+                {% csrf_token %}
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="packageModalLabel">Send the basic package!</h4>
+                </div>
+                <div class="modal-body">
+                  <p>We're just getting started, so for now we only offer one package. This let's us focus on the best possible service. For only $29 your loved one will get a DVD, Bicycle brand playing cards, a notebook, 4x AA batteries, two camping carabiners, an LED flashlight, a Bic lighter, some Pilot G2 pens!</p>
+                  <p>Additonally, we'll offer the option to upload and image and type a message. We'll print this out in a postcard format so that your loved one can get a personalized message from you. We hope this will cheer them up a bit, as it's always nice to hear from home.</p>
+                  <img src="{{STATIC_URL}}img/basic_package_grass.jpg" id="basicPackageImg">
+<!--                     <div class="form-group">
+                      <label for="inputName" class="visuallyhidden">Sercive member's name</label>
+                      <input type="text" class="form-control" id="inputName" name="name" placeholder="Service member's name">
+                      <label for="inputAddress" class="visuallyhidden">Service member's address</label>
+                      <textarea class="form-control" rows="3" name="address" placeholder="Service member's address"></textarea>
+                  
+
+                </div>
+ -->                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<!--                   <button type="submit" action="submit" class="btn btn-primary">Send some love!</button>
+ -->                </div>
+              </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div><!-- / div.product-description -->
+<!-- 
+      <div class="sign-up blue-bg-dark">
+        <div class="row">
+          <div class="col-xs-8 col-xs-offset-2">
+            <div class="text-center">
+              <h4>We're just getting started! Sign up to stay up-to-date and recieve 25% off your first package!</h4>
+            </div>
+            <form class="form-inline center" role="form" method="POST">
+              {% csrf_token %}
+              <div class="form-group center">
+                <label class="sr-only" for="input_email">Email address</label>
+                <div class="input-group input-group-lg">
+                  <input type="email" class="form-control" id="input_email" name="email" placeholder="Email address" required>
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-green" action="submit">Sign up!</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> <!-- / div.sign-up --> -->
+
+    </div> <!-- / div.col-md-height -->
+
+  </div> <!-- / div.row -->
+
+  <footer>
+    <span class="copyright">Made by ToTroops &#169; {{ current_year }}</span>
+<!--     <form action="" method="">
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_l7uur4tglVrl6kRTIn8EAvGs"
+        data-amount="2900"
+        data-name="ToTroops Package"
+        data-description="1 Basic package ($29)"
+        data-image="/128x128.png">
+      </script>
+    </form>
+ -->  </footer>
+
+
+{% endblock %}

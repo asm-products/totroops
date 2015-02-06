@@ -41,8 +41,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Other apps.
     'analytical',
-    'polls',
     'post_office',
+    'compressor',
+    'totroops',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -79,7 +80,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 ADMINS = (
-    ('Phil', 'philiplicarter@gmail.com'),
+    ('Phil', 'phil@totroops.com'),
 )
 
 # Static files (CSS, JavaScript, Images)
@@ -93,7 +94,21 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
+
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
+# Django Compressor
+# http://django-compressor.readthedocs.org/en/latest/
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'sass --scss {infile} {outfile}'),
+)
 
 import dj_database_url
 DATABASES = {}

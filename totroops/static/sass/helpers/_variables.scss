@@ -1,0 +1,27 @@
+// Descriptive variables
+$color-avocado: #949E6D;
+$color-kokoda: #6D7158;
+$color-fuscous-gray: #505246;
+
+$color-river-bed: #434D57;
+$color-mako: #3C4248;
+$color-outer-space: #36383A;
+
+$color-wedgewood: #507EAE;
+
+// Functional variables
+$brand-color: $color-river-bed;
+$accent-color: $color-avocado;
+
+$brand-color-dark: $color-mako;
+$brand-color-darker: $color-outer-space;
+
+$accent-color-dark: $color-kokoda;
+$accent-color-darker:$color-fuscous-gray;
+
+// TODO: Define common break points
+$break-small: 560px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-xlarge: 1200px;
+$break-xxlarge: 1475px;
